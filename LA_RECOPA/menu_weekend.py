@@ -60,6 +60,7 @@ def menu_weekend():
                         columns=rx.breakpoints(
                             initial="1", # Móvil
                             sm="2",      # Z Fold abierto / Tablet
+                            xs="2",  # Esto forzará las 2 columnas en pantallas como el Fold abierto
                         ),
                         spacing="6",
                         width="100%",

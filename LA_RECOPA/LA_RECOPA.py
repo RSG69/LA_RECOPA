@@ -58,7 +58,12 @@ def cuerpo():
                     crear_celda("ALMUERZOS", ALMUERZOS, "right", "linear-gradient(135deg,#43C6AC,#191654)"),
                     crear_celda("MENU FIN DE SEMANA", PLATOS, "right", "linear-gradient(135deg,#8360c3,#2ebf91)", link="/menu-weekend"),
                     
-                    columns=rx.breakpoints(initial="1", sm="2", lg="3"),
+                    columns=rx.breakpoints(
+                        initial="1", 
+                        sm="2", 
+                        lg="3",
+                        xs="2",  # Esto forzará las 2 columnas en pantallas como el Fold abierto
+                    ),
                     spacing="6",
                     width="100%",
                     grid_auto_rows="1fr", 
