@@ -11,7 +11,7 @@ from .celda import crear_celda
 custom_theme = rx.theme(color_scheme="orange")
 
 # ================================================
-#   LISTAS
+#   LISTAS DE DATOS
 # ================================================
 DESAYUNOS = [
     ["Café con leche y croissant", "/desayunos/Cafe_con_leche_y_cruasan.jpg"],
@@ -32,79 +32,56 @@ TAPAS = [
 ]
 
 PLATOS = [
-    ["Filete con patatas", "/filete_con_patatas.jpg"],
-    ["Paella valenciana", "/paella.jpg"],
-    ["Lentejas caseras", "/lentejas.jpg"],
-
-
+    ["Entrecotte a la pimienta", "/platos_2/Entrecotte a la pimienta con Patatas Fritas.jpg"],
+    ["Codillo Asado", "/platos_2/Codillo Asado con Patatas Panaderas.jpg"],
+    ["Salmon Fresco al Horno", "/platos_2/Salmon Fresco al Horno con Guarnicion.jpg"],
 ]
 
 # ================================================
-#   CUERPO
+#   CUERPO (CON MARGEN Y SOPORTE DE MOVIMIENTO)
 # ================================================
 def cuerpo():
-    return rx.box(
-        rx.script(src="/JS/animation.js"),
+    return rx.vstack(
+        rx.center(
+            rx.box(
+                
+                rx.script(src="/JS/animation.js"),
 
-        rx.box(
-            rx.grid(
-                crear_celda(
-                    "DESAYUNOS",
-                    DESAYUNOS,
-                    "up",
-                    "linear-gradient(135deg,#e6c193,#ED8F03)",
+                rx.grid(
+                    crear_celda("DESAYUNOS", DESAYUNOS, "left", "linear-gradient(135deg,#F7971E,#FFD200)"),
+                    crear_celda("ALMUERZOS", ALMUERZOS, "right", "linear-gradient(135deg,#43C6AC,#191654)"),
+                    crear_celda("TAPAS", TAPAS, "left", "linear-gradient(135deg,#F7971E,#FFD200)"),
+                    crear_celda("DESAYUNOS", DESAYUNOS, "left", "linear-gradient(135deg,#F7971E,#FFD200)"),
+                    crear_celda("ALMUERZOS", ALMUERZOS, "right", "linear-gradient(135deg,#43C6AC,#191654)"),
+                    crear_celda("TAPAS", TAPAS, "left", "linear-gradient(135deg,#F7971E,#FFD200)"),
+                    crear_celda("DESAYUNOS", DESAYUNOS, "left", "linear-gradient(135deg,#F7971E,#FFD200)"),
+                    crear_celda("ALMUERZOS", ALMUERZOS, "right", "linear-gradient(135deg,#43C6AC,#191654)"),
+                    crear_celda("MENU FIN DE SEMANA", PLATOS, "right", "linear-gradient(135deg,#8360c3,#2ebf91)", link="/menu-weekend"),
+                    
+                    columns=rx.breakpoints(initial="1", sm="2", lg="3"),
+                    spacing="6",
+                    width="100%",
+                    grid_auto_rows="1fr", 
+                    justify_items="center",
+                    align_items="stretch", 
                 ),
-                crear_celda(
-                    "ALMUERZOS",
-                    ALMUERZOS,
-                    "down",
-                    "linear-gradient(135deg,#43C6AC,#191654)",
-                ),
-                crear_celda(
-                    "TAPAS",
-                    TAPAS,
-                    "left",
-                    "linear-gradient(135deg,#F7971E,#FFD200)",
-                ),
-                crear_celda(
-                    "PLATOS",
-                    PLATOS,
-                    "right",
-                    "linear-gradient(135deg,#8360c3,#2ebf91)",
-                ),
-                crear_celda(
-                    "DESAYUNOS",
-                    DESAYUNOS,
-                    "up",
-                    "linear-gradient(135deg,#e6c193,#ED8F03)",
-                ),
-                crear_celda(
-                    "ALMUERZOS",
-                    ALMUERZOS,
-                    "down",
-                    "linear-gradient(135deg,#43C6AC,#191654)",
-                ),
-                crear_celda(
-                    "TAPAS",
-                    TAPAS,
-                    "left",
-                    "linear-gradient(135deg,#F7971E,#FFD200)",
-                ),
-                crear_celda(
-                    "MENU FIN DE SEMANA",
-                    PLATOS,
-                    "right",
-                    "linear-gradient(135deg,#8360c3,#2ebf91)",
-                    link="/menu-weekend",   # 👈 SOLO ESTA ES CLICABLE
-                ),
-                columns=rx.breakpoints(sm="1", md="2", lg="3"),
-                spacing="6",
-                justify="center",
+                width="100%",
+                max_width="75rem",
+                padding_x="1rem",
+                margin_x="auto",
             ),
-            class_name="grid-background",
+            width="100%",
         ),
 
-        margin_top="70px",
+        # 🔑 SOLUCIÓN MARGEN: Aumentamos el margen superior para que respire
+        # initial es para móvil, lg para pantallas grandes
+        margin_top=rx.breakpoints(
+            initial="6.5rem",  # Más espacio en móvil para que no toque la cabecera
+            lg="8.5rem"        # Espacio generoso en PC
+        ),
+        padding_bottom="6.25rem",
+        width="100%",
+        align="center",
     )
 
 # ================================================
@@ -117,18 +94,20 @@ def galeria():
         footer(),
         bg="linear-gradient(135deg, #fddac7, #f7bfa8)",
         min_height="100vh",
+        width="100%",
     )
 
 # ================================================
-#   APP
+#   APP CONFIG
 # ================================================
+# 🔑 SOLUCIÓN MOVIMIENTO: Asegúrate de que el CSS esté bien vinculado
 app = rx.App(
-    stylesheets=["/carousel.css"],
-    theme=custom_theme,
+    stylesheets=[
+        "/carousel.css",  # Verifica que este archivo esté en la carpeta /assets/
+    ],
+    theme=custom_theme
 )
 
-app.add_page(galeria, title="La Recopa", route="/")
-app.add_page(menu_weekend, title="Menú Fin de Semana", route="/menu-weekend")
-
-if __name__ == "__main__":
-    app.run()
+# RUTAS
+app.add_page(galeria, route="/")
+app.add_page(menu_weekend, route="/menu-weekend")

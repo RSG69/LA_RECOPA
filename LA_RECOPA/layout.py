@@ -6,17 +6,20 @@ import reflex as rx
 def header():
     return rx.box(
         rx.hstack(
-            #rx.image(src="/Bar_Cafeteria.png", height="80px", class_name="logo-bar"),
-            rx.image(src="/cafeteria.png", height="80px", class_name="logo-bar"),
-            rx.image(src="/escudo.png", height="60px", class_name="logo-escudo"),
-            rx.image(src="/la_recopa.png", height="80px", class_name="logo-recopa"),
-            spacing="9",
+            # Altura original 80px -> 5rem
+            rx.image(src="/cafeteria.png", height="5rem", class_name="logo-bar"),
+            # Altura original 60px -> 3.75rem
+            rx.image(src="/escudo.png", height="3.75rem", class_name="logo-escudo"),
+            # Altura original 80px -> 5rem
+            rx.image(src="/la_recopa.png", height="5rem", class_name="logo-recopa"),
+            spacing="9", # El spacing de Reflex es una escala interna (9 ≈ 2.25rem)
             align="center",
             justify="center",
             class_name="header-logos",
         ),
         width="100%",
-        #height="95px",
+        # Si decides activar el height fijo, 95px -> 5.9375rem
+        # height="5.9375rem",
         position="fixed",
         top="0",
         z_index="1000",
@@ -43,30 +46,45 @@ def header():
 def footer():
     return rx.box(
         rx.hstack(
-            rx.box(width="120px"),
+            # Espacio lateral 120px -> 7.5rem
+            rx.box(width="7.5rem"),
             rx.text(
                 "Direccion: C/ Mosen Andres Vicente , nº 27 - Zaragoza - Telefono: 976 31 57 15",
                 class_name="footer-text",
                 width="100%",
                 text_align="center",
+                # Tamaño de fuente estándar 16px -> 1rem
+                font_size="1rem",
             ),
             rx.vstack(
-                rx.image(src="/rsg69.png", width="28px", height="28px", border_radius="6px"),
-                rx.text("©Robert69", font_size="12px", color="#555"),
+                # Icono 28px -> 1.75rem
+                rx.image(
+                    src="/rsg69.png", 
+                    width="1.75rem", 
+                    height="1.75rem", 
+                    border_radius="0.375rem" # 6px -> 0.375rem
+                ),
+                # Texto pequeño 12px -> 0.75rem
+                rx.text("©Robert69", font_size="0.75rem", color="#555"),
                 spacing="0",
                 align="center",
-                width="120px",
+                # Margen derecho 20px -> 1.25rem
+                padding_right="1.25rem",
             ),
-            justify="between",
-            align="center",
             width="100%",
-            padding_x="12px",
+            align="center",
+            justify="between",
         ),
-        bg="white",
-        height="auto",
         width="100%",
+        # Altura del footer 90px -> 5.625rem
+        #height="5.625rem",
+        #hago mas mas pequeño (alto) el footer
+        height="3rem",
+        bg="white",
+        border_top="0.0625rem solid #eaeaea", # 1px -> 0.0625rem
+        display="flex",
+        align_items="center",
         position="fixed",
         bottom="0",
-        border_top="1px solid #ccc",
-        z_index="300",
+        z_index="1000",
     )
