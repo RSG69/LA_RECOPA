@@ -40,8 +40,8 @@ def menu_weekend():
         header(),
         rx.vstack(
             rx.heading(
-                "Menú Fin De Semana",
-                size=rx.breakpoints(initial="5", sm="7", md="8", lg="9"),
+                TITULO,
+                size=rx.breakpoints(initial="7", sm="7", md="8", lg="9"),
                 color="#5A0F14",
                 text_align="center",
                 width="100%",
