@@ -46,6 +46,7 @@ def menu_weekend():
                 text_align="center",
                 width="100%",
                 padding_x="1.5rem",
+                margin_top=rx.breakpoints(initial="4rem", sm="4.5rem", lg="8.5rem"),
                 margin_bottom=rx.breakpoints(initial="1rem", sm="2rem", lg="3rem"),
             ),
             rx.center(
