@@ -46,7 +46,7 @@ def menu_weekend():
                 text_align="center",
                 width="100%",
                 padding_x="1.5rem",
-                margin_top=rx.breakpoints(initial="1rem", sm="4.5rem", lg="2.5rem"),
+                #margin_top=rx.breakpoints(initial="1rem", sm="4.5rem", lg="2.5rem"),
                 margin_bottom=rx.breakpoints(initial="1rem", sm="2rem", lg="3rem"),
             ),
             rx.center(
@@ -80,7 +80,7 @@ def menu_weekend():
             
             spacing="0",
             # Margen superior para no chocar con el header fijo
-            margin_top=rx.breakpoints(initial="6.5rem", lg="8.5rem"),
+            margin_top=rx.breakpoints(initial="4rem", lg="8.5rem"),
             padding_bottom="6.25rem",
             width="100%",
             align="center",
