@@ -328,3 +328,15 @@ html, body {
     transform: scale(1.2);
   }
 }
+
+/* Añade esto en la sección de MÓVIL (max-width: 45rem) */
+@media (max-width: 45rem) {
+  :root {
+    --footer-h: 6rem; /* Aumentamos la altura del footer en móvil */
+  }
+  
+  .footer-text {
+    font-size: 1.1rem; /* Opcional: aumentamos un poco el texto para que sea legible */
+    padding: 1rem;
+  }
+}

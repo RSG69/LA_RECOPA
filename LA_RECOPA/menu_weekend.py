@@ -38,6 +38,9 @@ TITULO = "Menú Fin De Semana - 20 y 21 de Diciembre"
 def menu_weekend():
     return rx.box(
         header(),
+        rx.box(
+            rx.text("PRECIO"),
+        ),
         rx.vstack(
             rx.heading(
                 TITULO,
@@ -56,7 +59,7 @@ def menu_weekend():
                         crear_celda("Segundo Plato", PLATOS_2, "right", "linear-gradient(135deg,#8360c3,#2ebf91)"),
                         crear_celda("Postres", POSTRES, "right", "linear-gradient(135deg,#F7971E,#FFD200)"),
                         crear_celda("Bebida y Pan", BEBIDA_Y_PAN, None, "linear-gradient(135deg,#43C6AC,#191654)"),
-                        
+                      
                         # 🔑 CONFIGURACIÓN RESPONSIVA
                         columns=rx.breakpoints(
                             initial="1", # Móvil
@@ -69,6 +72,26 @@ def menu_weekend():
                         grid_auto_rows="1fr", 
                         align_items="stretch",
                         justify_items="center",
+                    ),
+                    rx.hstack(
+                        rx.text(
+                            "PRECIO: 21€",
+                            font_weight="bold",
+                            color="blue",
+                            font_size="2em",
+                            #text_align="center"
+                            margin_top="3rem",
+                            bg="white",
+                        ),
+                        rx.spacer(),
+                        rx.text(
+                            "TAMBIEN PARA LLEVAR",
+                            font_weight="bold",
+                            color="blue",
+                            font_size="2em",
+                            margin_top="3rem",
+                            bg="white",
+                        ),
                     ),
                     width="100%",
                     max_width="68.75rem", # 1100px
