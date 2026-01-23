@@ -85,7 +85,7 @@ def cuerpo():
             lg="8.5rem"        # Espacio generoso en PC
         ),
         padding_bottom=rx.breakpoints(
-            initial="15rem",  # Mucho más espacio en móvil para el texto largo
+            initial="18rem",  # Mucho más espacio en móvil para el texto largo
             lg="6.25rem"      # Espacio normal en PC
         ),
         width="100%",

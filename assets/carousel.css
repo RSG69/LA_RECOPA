@@ -247,20 +247,22 @@ html, body {
     transform: scale(1.5);
   }
 
-  .footer-text {
-    font-size: 1.1rem;      /* Ajustado para legibilidad */
-    padding: 2rem 1rem;     /* Aumentamos el padding vertical */
+ .footer-text {
+    font-size: 1rem;
+    padding: 2rem 1rem;     /* Mucho padding arriba/abajo para que respire */
     line-height: 1.6;       
-    height: auto;           /* 👈 CLAVE: Permite que crezca según el texto */
-    display: block;         /* Asegura que ocupe todo el ancho */
+    height: auto !important; /* Forzamos que crezca según el texto */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white; /* Asegura que el fondo tape las tarjetas si se cruzan */
     width: 100%;
-    margin-bottom: 0;
   }
 
+  /* 2. El spacer es vital: es el "hueco" que dejamos al final de la web 
+     para que el usuario pueda hacer scroll y ver el texto completo */
   .footer-spacer {
-    /* Eliminamos el uso de --footer-h y damos un margen generoso 
-       para que las tarjetas no tapen el texto */
-    height: 20rem;          /* 👈 CLAVE: Espacio extra al final del scroll */
+    height: 15rem !important; /* Aumentamos el hueco al final del scroll */
   }
 
 
