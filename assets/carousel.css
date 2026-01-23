@@ -260,7 +260,7 @@ html, body {
   .footer-spacer {
     /* Eliminamos el uso de --footer-h y damos un margen generoso 
        para que las tarjetas no tapen el texto */
-    height: 12rem;          /* 👈 CLAVE: Espacio extra al final del scroll */
+    height: 20rem;          /* 👈 CLAVE: Espacio extra al final del scroll */
   }
 
 
