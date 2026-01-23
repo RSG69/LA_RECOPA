@@ -248,14 +248,22 @@ html, body {
   }
 
   .footer-text {
-    font-size: 1.15rem;      /* 🔼 texto más grande */
-    padding: 2rem 1.25rem;   /* 🔼 MÁS ALTURA REAL */
-    line-height: 1.8;        /* 🔼 respiración */
+    font-size: 1.1rem;      /* Ajustado para legibilidad */
+    padding: 2rem 1rem;     /* Aumentamos el padding vertical */
+    line-height: 1.6;       
+    height: auto;           /* 👈 CLAVE: Permite que crezca según el texto */
+    display: block;         /* Asegura que ocupe todo el ancho */
+    width: 100%;
+    margin-bottom: 0;
   }
 
   .footer-spacer {
-    height: 2.5rem;
+    /* Eliminamos el uso de --footer-h y damos un margen generoso 
+       para que las tarjetas no tapen el texto */
+    height: 12rem;          /* 👈 CLAVE: Espacio extra al final del scroll */
   }
+
+
 
   .grid-background{
     padding-left: 1rem;
