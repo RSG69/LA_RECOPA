@@ -241,16 +241,23 @@ html, body {
     transform: scale(1.5);
   }
   :root {
-    --footer-h: 20rem; /* Aumentamos la altura del footer en móvil */
+    --footer-h: 16rem; /* Aumentamos la altura del footer en móvil */
   }
   
   .footer-text {
-    font-size: 0.95rem; 
-    padding: 1rem; 
-    line-height: 1.5;
+    /*font-size: 0.95rem; 
+    #padding: 1rem; 
+    #line-height: 1.5;*/
+
+    
+    font-size: 1rem;
+    padding: 1.25rem 1rem;
+    line-height: 1.6;
+
     /* Aseguramos que el contenedor permita el flujo de texto */
-    height: auto; 
-    display: block;
+    /*height: auto; 
+    display: block;*/
+
   }
 
   /* Grid */
