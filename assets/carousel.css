@@ -247,15 +247,14 @@ html, body {
     transform: scale(1.5);
   }
 
-  /* 🔑 FOOTER: SOLO TEXTO, NO ALTURA */
-  .footer-text{
-    font-size: 1rem;
-    padding: 1.25rem 1rem;
-    line-height: 1.6;
+  .footer-text {
+    font-size: 1.15rem;      /* 🔼 texto más grande */
+    padding: 2rem 1.25rem;   /* 🔼 MÁS ALTURA REAL */
+    line-height: 1.8;        /* 🔼 respiración */
   }
 
-  .footer-spacer{
-    height: 3rem;
+  .footer-spacer {
+    height: 2.5rem;
   }
 
   .grid-background{
