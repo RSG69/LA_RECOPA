@@ -14,7 +14,10 @@ html, body {
   box-sizing: border-box;
 }
 
-/* Variables globales en rem */
+/* =========================================================
+   VARIABLES GLOBALES
+========================================================= */
+
 :root {
   --gap: 2.25rem;              /* 36px */
 
@@ -26,18 +29,18 @@ html, body {
   --img-h-mobile: 12.5rem;     /* 200px */
 
   --radius: 1.375rem;          /* 22px */
-  --footer-h: 4rem;            /* 64px (Ajustado al nuevo footer pequeño) */
+
+  /* 🔑 FOOTER: SOLO SEPARACIÓN, NO ALTURA REAL */
+  --footer-h: 4rem;
 }
 
 /* =========================================================
-   🖥️ DESKTOP (BASE POR DEFECTO)
+   HEADER
 ========================================================= */
-
-/* ---------- HEADER ---------- */
 
 .header{
   height: auto;
-  padding: 0.375rem 0;        /* 6px */
+  padding: 0.375rem 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -47,15 +50,14 @@ html, body {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: clamp(4.375rem, 40vw, 6.5625rem); /* 70px a 105px */
+  gap: clamp(4.375rem, 40vw, 6.5625rem);
 }
 
 .header-logos img{
-  height: 5.625rem;           /* 90px */
+  height: 5.625rem;
   width: auto;
 }
 
-/* Logos desktop */
 .logo-bar,
 .logo-recopa{
   transform: scale(3.5);
@@ -67,37 +69,40 @@ html, body {
   transform-origin: center;
 }
 
-.grid-background{
-  padding-top: clamp(2.5rem, 6vw, 4.375rem);           /* 40px a 70px */
-  padding-bottom: calc(var(--footer-h) + 1.25rem);    /* footer + 20px */
+/* =========================================================
+   GRID GENERAL
+========================================================= */
 
-  /* padding SIMÉTRICO */
-  padding-left: clamp(1rem, 5vw, 5rem);               /* 16px a 80px */
+.grid-background{
+  padding-top: clamp(2.5rem, 6vw, 4.375rem);
+  padding-bottom: calc(var(--footer-h) + 1.25rem);
+  padding-left: clamp(1rem, 5vw, 5rem);
   padding-right: clamp(1rem, 5vw, 5rem);
-  
   display: flex;
   justify-content: center;
 }
 
 .grid-background > div{
   width: 100%;
-  max-width: 75rem;           /* 1200px */
+  max-width: 75rem;
   margin: 0 auto;
   justify-items: center;
 }
 
-/* ---------- CARD ---------- */
+/* =========================================================
+   TARJETAS
+========================================================= */
 
 .carousel-item{
   width: 100%;
   max-width: var(--card-max-desktop);
-  padding: 1.25rem;           /* 20px */
+  padding: 1.25rem;
   border-radius: var(--radius);
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  box-shadow: 0 0.625rem 1.375rem rgba(0,0,0,0.20);   /* 10px 22px */
-  border: 0.0625rem solid rgba(255,255,255,0.35);    /* 1px */
+  box-shadow: 0 0.625rem 1.375rem rgba(0,0,0,0.20);
+  border: 0.0625rem solid rgba(255,255,255,0.35);
 }
 
 .vstack-wrapper{
@@ -109,19 +114,19 @@ html, body {
 
 .heading{
   font-family: "Playfair Display", serif;
-  font-size: clamp(1.25rem, 4vw, 1.75rem);            /* 20px a 28px */
+  font-size: clamp(1.25rem, 4vw, 1.75rem);
   font-weight: 700;
   color: #fff;
-  text-shadow: 0 0.125rem 0.375rem rgba(0,0,0,0.4);   /* 2px 6px */
-  margin-bottom: 0.75rem;     /* 12px */
+  text-shadow: 0 0.125rem 0.375rem rgba(0,0,0,0.4);
+  margin-bottom: 0.75rem;
 }
 
 .carousel-box{
   width: 100%;
   height: var(--img-h-desktop);
-  border-radius: calc(var(--radius) - 0.25rem);      /* radius - 4px */
+  border-radius: calc(var(--radius) - 0.25rem);
   overflow: hidden;
-  margin-bottom: 0.625rem;    /* 10px */
+  margin-bottom: 0.625rem;
   position: relative;
 }
 
@@ -132,28 +137,30 @@ html, body {
 }
 
 .carousel-item-text{
-  height: 3.5rem;             /* 56px */
-  padding: 0 0.75rem;         /* 12px */
+  height: auto;
+  min-height: 3.5rem;
+  padding: 0.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  /*font-size: clamp(1.625rem, 13vw, 1.875rem);*/         /* 26px a 30px */
-  font-size: clamp(1.400rem, 13vw, 1.600rem);
+  font-size: clamp(1.2rem, 5vw, 1.875rem);
   font-weight: 800;
   color: #fff;
-  text-shadow: 0 0.1875rem 0.5rem rgba(0,0,0,0.45);   /* 3px 8px */
-  line-height: 1.2;
+  text-shadow: 0 0.1875rem 0.5rem rgba(0,0,0,0.45);
+  line-height: 1.3;
 }
 
-/* ---------- FOOTER ---------- */
+/* =========================================================
+   FOOTER
+========================================================= */
 
 .footer-text{
-  font-size: clamp(0.75rem, 3vw, 1rem);               /* 12px a 16px */
+  font-size: clamp(0.75rem, 3vw, 1rem);
   text-align: center;
   color: #333;
-  line-height: 1.4;
-  padding: 0 1rem;            /* 16px */
+  line-height: 1.5;
+  padding: 1rem;
 }
 
 .footer-spacer{
@@ -161,10 +168,10 @@ html, body {
 }
 
 /* =========================================================
-   📲 TABLET
+   TABLET
 ========================================================= */
 
-@media (max-width: 68.75rem){ /* 1100px */
+@media (max-width: 68.75rem){
 
   .carousel-item{
     max-width: var(--card-max-tablet);
@@ -175,15 +182,16 @@ html, body {
   }
 
   .header-logos{
-    gap: 2rem;                /* 32px */
+    gap: 2rem;
   }
 }
 
-/* ---------- TABLET VERTICAL ---------- */
+/* =========================================================
+   TABLET VERTICAL
+========================================================= */
 
-@media (min-width: 48rem) and (max-width: 64rem) and (orientation: portrait){ /* 768px a 1024px */
+@media (min-width: 48rem) and (max-width: 64rem) and (orientation: portrait){
 
-  /* Header */
   .logo-bar,
   .logo-recopa,
   .logo-escudo{
@@ -191,11 +199,11 @@ html, body {
   }
 
   .header-logos{
-    gap: 5rem;                /* 80px */
+    gap: 5rem;
   }
 
   .header-logos img{
-    height: 4.5rem;           /* 72px */
+    height: 4.5rem;
   }
 
   .logo-bar,
@@ -203,147 +211,111 @@ html, body {
     transform: scale(3.0);
   }
 
-  /* Grid */
   .grid-background{
-    padding-top: 3.75rem;     /* 60px */
-    padding-bottom: calc(var(--footer-h) + 0.625rem); /* footer + 10px */
+    padding-top: 3.75rem;
+    padding-bottom: calc(var(--footer-h) + 0.625rem);
   }
 
   .grid-background > div{
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 22.5rem)); /* 360px */
+    grid-template-columns: repeat(2, minmax(0, 22.5rem));
     justify-content: center;
     gap: var(--gap);
   }
 }
 
 /* =========================================================
-   📱 MÓVIL
+   MÓVIL
 ========================================================= */
 
-@media (max-width: 45rem){ /* 720px */
+@media (max-width: 45rem){
 
-  /* Header */
   .header{
-    padding: 0.25rem 0;       /* 4px */
+    padding: 0.25rem 0;
   }
 
   .header-logos{
-    gap: 1rem;                /* 16px */
+    gap: 1rem;
   }
 
   .header-logos img{
-    height: 3.5rem;           /* 56px */
+    height: 3.5rem;
   }
 
   .logo-bar,
   .logo-recopa{
     transform: scale(1.5);
   }
-  :root {
-    --footer-h: 20rem; /* Aumentamos la altura del footer en móvil */
-  }
-  
-  .footer-text {
-    /*font-size: 0.95rem; 
-    #padding: 1rem; 
-    #line-height: 1.5;*/
 
-    
+  /* 🔑 FOOTER: SOLO TEXTO, NO ALTURA */
+  .footer-text{
     font-size: 1rem;
     padding: 1.25rem 1rem;
     line-height: 1.6;
-
-    /* Aseguramos que el contenedor permita el flujo de texto */
-    height: auto; 
-    display: block;
-
   }
 
-  /* Grid */
+  .footer-spacer{
+    height: 3rem;
+  }
+
   .grid-background{
-    padding-left: 1rem;       /* 16px */
+    padding-left: 1rem;
     padding-right: 1rem;
   }
 
-  /* Card */
   .carousel-item{
     max-width: 100%;
-    padding: 1.125rem;        /* 18px */
+    padding: 1.125rem;
   }
 
   .carousel-box{
     height: var(--img-h-mobile);
   }
-
-  .carousel-item-text{
-    height: 4rem;             /* 64px */
-    /* Corregido el valor mínimo del clamp de 2px a un tamaño legible */
-    font-size: clamp(1.300rem, 14vw, 1.600rem);      /* 25px... */
-  }
 }
 
 /* =========================================================
-   📱 OPTIMIZACIÓN PARA PLEGABLES (Z FOLD)
+   PLEGABLES (Z FOLD)
 ========================================================= */
 
-/* 1. Pantalla interior (Abierta - Formato casi cuadrado) */
-@media (min-width: 37.5rem) and (max-width: 56.25rem) and (min-aspect-ratio: 1/1) {
-  /* En el Z Fold abierto, queremos 2 columnas pero con tarjetas un poco más pequeñas */
-  .grid-background > div {
+@media (min-width: 37.5rem) and (max-width: 56.25rem) and (min-aspect-ratio: 1/1){
+
+  .grid-background > div{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1.25rem;
     max-width: 100%;
   }
 
-  .header-logos {
+  .header-logos{
     gap: 2.5rem;
   }
 
-  .header-logos img {
-    height: 3.75rem; /* Ajustamos logos para que no ocupen media pantalla */
+  .header-logos img{
+    height: 3.75rem;
   }
 
-  .logo-bar, .logo-recopa {
-    transform: scale(1.8); /* Reducimos el escalado exagerado */
-  }
-}
-
-/* 2. Soporte para la API de Plegables (Detecta la bisagra física si existe) */
-@media (spanning: single-fold-vertical) {
-  .grid-background > div {
-    grid-template-columns: 1fr 1fr; /* Una columna a cada lado de la bisagra */
-    gap: 3rem; /* Espacio para que el contenido no quede bajo la arruga */
+  .logo-bar,
+  .logo-recopa{
+    transform: scale(1.8);
   }
 }
 
 /* =========================================================
-   📲 TABLET Y MÓVIL (CORRECCIONES)
+   MÓVIL MUY ESTRECHO
 ========================================================= */
 
-@media (max-width: 68.75rem) {
-  .carousel-item { max-width: var(--card-max-tablet); }
-  .carousel-box { height: var(--img-h-tablet); }
-}
+@media (max-width: 21.875rem){
 
-/* Ajuste específico para el título en pantallas variables */
-.carousel-item-text {
-  height: auto;
-  min-height: 3.5rem;
-  padding: 0.5rem;
-  font-size: clamp(1.2rem, 5vw, 1.875rem); /* Fuente fluida */
-}
-
-/* Corrección de logos en móvil muy estrecho (Pantalla externa Z Fold) */
-@media (max-width: 21.875rem) { /* Menos de 350px */
-  .header-logos {
+  .header-logos{
     gap: 0.5rem;
   }
-  .header-logos img {
+
+  .header-logos img{
     height: 2.5rem;
   }
-  .logo-bar, .logo-recopa {
+
+  .logo-bar,
+  .logo-recopa{
     transform: scale(1.2);
   }
 }
