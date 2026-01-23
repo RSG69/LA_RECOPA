@@ -84,7 +84,10 @@ def cuerpo():
             initial="6.5rem",  # Más espacio en móvil para que no toque la cabecera
             lg="8.5rem"        # Espacio generoso en PC
         ),
-        padding_bottom="6.25rem",
+        padding_bottom=rx.breakpoints(
+            initial="15rem",  # Mucho más espacio en móvil para el texto largo
+            lg="6.25rem"      # Espacio normal en PC
+        ),
         width="100%",
         align="center",
     )
