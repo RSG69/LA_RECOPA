@@ -241,7 +241,7 @@ html, body {
     transform: scale(1.5);
   }
   :root {
-    --footer-h: 12rem; /* Aumentamos la altura del footer en móvil */
+    --footer-h: 16rem; /* Aumentamos la altura del footer en móvil */
   }
   
   .footer-text {
