@@ -255,8 +255,8 @@ html, body {
     line-height: 1.6;
 
     /* Aseguramos que el contenedor permita el flujo de texto */
-    /*height: auto; 
-    display: block;*/
+    height: auto; 
+    display: block;
 
   }
 
