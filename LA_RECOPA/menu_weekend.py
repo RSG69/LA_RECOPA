@@ -104,7 +104,7 @@ def menu_weekend():
             spacing="0",
             # Margen superior para no chocar con el header fijo
             margin_top=rx.breakpoints(initial="4rem", lg="8.5rem"),
-            padding_bottom="6.25rem",
+            padding_bottom="12rem",
             width="100%",
             align="center",
         ),
