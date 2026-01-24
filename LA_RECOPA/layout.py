@@ -79,9 +79,13 @@ def footer():
                 # Margen derecho 20px -> 1.25rem
                 padding_right="1.25rem",
             ),
-            width="100%",
+            direction=rx.breakpoints(initial="column", lg="row"),
             align="center",
-            justify="between",
+            justify="center",
+            spacing="4",
+            # AQUÍ ESTÁ EL TRUCO: Más espacio vertical en móviles
+            padding_y=rx.breakpoints(initial="1.5rem", lg="0.75rem"),
+            width="100%",
         ),
         width="100%",
         # Altura del footer 90px -> 5.625rem
