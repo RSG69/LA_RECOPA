@@ -248,15 +248,8 @@ html, body {
   }
 
  .footer-text {
-    font-size: 1rem;
-    padding: 2rem 1rem;     /* Mucho padding arriba/abajo para que respire */
-    line-height: 1.6;       
-    /*height: auto !important;*/ /* Forzamos que crezca según el texto */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: white; /* Asegura que el fondo tape las tarjetas si se cruzan */
-    width: 100%;
+    font-size: 0.95rem; /* Un poco más pequeño en móvil */
+    padding: 0.5rem 0;
   }
 
   /* 2. El spacer es vital: es el "hueco" que dejamos al final de la web 
