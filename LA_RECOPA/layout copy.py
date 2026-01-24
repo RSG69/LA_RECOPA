@@ -47,22 +47,14 @@ def footer():
     return rx.box(
         rx.hstack(
             # Espacio lateral 120px -> 7.5rem
-            #rx.box(width="7.5rem"),
-             rx.vstack(
-                 rx.text(
-                    "Dirección: C/ Mosén Andrés Vicente, nº 27 – Zaragoza",
-                    text_align="center",
-                 ),
-                rx.text(
-                    "Teléfono: 976 31 57 15",
-                    text_align="center",
-                ),
-                spacing="2",
-                padding_y="2.5rem",   # 🔑 ALTURA REAL
-                padding_x="1.25rem",
+            rx.box(width="7.5rem"),
+            rx.text(
+                "Direccion: C/ Mosen Andres Vicente , nº 27 - Zaragoza - Telefono: 976 31 57 15",
                 class_name="footer-text",
-                align="center",
                 width="100%",
+                text_align="center",
+                # Tamaño de fuente estándar 16px -> 1rem
+                font_size="1rem",
             ),
             rx.vstack(
                 # Icono 28px -> 1.75rem
