@@ -247,9 +247,12 @@ html, body {
     transform: scale(1.5);
   }
 
- .footer-text {
-    font-size: 0.65rem; /* Un poco más pequeño en móvil */
-    padding: 0.5rem 0;
+  .footer-text {
+    height: auto !important;
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   /* 2. El spacer es vital: es el "hueco" que dejamos al final de la web 
