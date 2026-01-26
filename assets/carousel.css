@@ -255,6 +255,11 @@ html, body {
     justify-content: center;
   }
 
+  /* Reducimos el logo del footer un poco en móvil si es necesario */
+  .footer-text img {
+    max-width: 40px;
+  }
+
   /* 2. El spacer es vital: es el "hueco" que dejamos al final de la web 
      para que el usuario pueda hacer scroll y ver el texto completo */
   .footer-spacer {
