@@ -45,58 +45,50 @@ def header():
 # ================================================
 def footer():
     return rx.box(
-        rx.hstack(
-            # Espacio lateral 120px -> 7.5rem
-            #rx.box(width="7.5rem"),
-             rx.vstack(
-                 rx.text(
+        rx.grid(
+            # Columna 1: Vacía para centrar el resto
+            rx.box(),
+            
+            # Columna 2: Texto central (Dirección y Teléfono)
+            rx.vstack(
+                rx.text(
                     "Dirección: C/ Mosén Andrés Vicente, nº 27 – Zaragoza",
-                    text_align="center",
-                 ),
+                    color="#333",
+                    font_size=rx.breakpoints(initial="0.65rem", lg="0.85rem"),
+                ),
                 rx.text(
                     "Teléfono: 976 31 57 15",
-                    text_align="center",
+                    color="#333",
+                    font_size=rx.breakpoints(initial="0.65rem", lg="0.85rem"),
                 ),
                 spacing="2",
-                padding_y="2.5rem",   # 🔑 ALTURA REAL
-                padding_x="1.25rem",
-                class_name="footer-text",
                 align="center",
-                width="100%",
             ),
+            
+            # Columna 3: Logo y Copyright a la derecha
             rx.vstack(
-                # Icono 28px -> 1.75rem
                 rx.image(
                     src="/rsg69.png", 
-                    width="1.75rem", 
-                    height="1.75rem", 
-                    border_radius="0.375rem" # 6px -> 0.375rem
+                    width="1.25rem", 
+                    height="1.25rem", 
+                    border_radius="0.2rem"
                 ),
-                # Texto pequeño 12px -> 0.75rem
-                rx.text("©Robert69", font_size="0.75rem", color="#555"),
+                rx.text("©Robert69", font_size="0.6rem", color="#666"),
                 spacing="0",
                 align="center",
-                # Margen derecho 20px -> 1.25rem
-                padding_right="1.25rem",
+                padding_right="1rem",
             ),
-            direction=rx.breakpoints(initial="column", lg="row"),
-            align="center",
-            justify="center",
-            spacing="4",
-            # AQUÍ ESTÁ EL TRUCO: Más espacio vertical en móviles
-            padding_y=rx.breakpoints(initial="1.5rem", lg="0.75rem"),
+            columns="3",
             width="100%",
+            align_items="center",
         ),
         width="100%",
-        # Altura del footer 90px -> 5.625rem
-        #height="5.625rem",
-        #hago mas mas pequeño (alto) el footer
-        height="3rem",
+        height="4rem",
         bg="white",
-        border_top="0.0625rem solid #eaeaea", # 1px -> 0.0625rem
-        display="flex",
-        align_items="center",
+        border_top="1px solid #eaeaea",
         position="fixed",
         bottom="0",
         z_index="1000",
+        display="flex",
+        align_items="center",
     )

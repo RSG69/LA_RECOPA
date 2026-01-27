@@ -173,6 +173,12 @@ html, body {
   height: var(--footer-h);
 }
 
+.footer-text, .footer-text span {
+  color: #333 !important;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
 /* =========================================================
    TABLET
 ========================================================= */
@@ -251,6 +257,10 @@ html, body {
   .logo-bar,
   .logo-recopa{
     transform: scale(1.5);
+  }
+
+  .footer-spacer {
+    height: 6rem !important;
   }
 
   /*.footer-text {
