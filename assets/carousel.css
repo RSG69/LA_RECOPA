@@ -155,12 +155,18 @@ html, body {
    FOOTER
 ========================================================= */
 
-.footer-text{
+/*.footer-text{
   font-size: clamp(0.75rem, 3vw, 1rem);
-  /*text-align: center;*/
+  text-align: center;
   color: #333;
-  /*line-height: 1.5rem;
-  padding: 1rem;*/
+  line-height: 1.5rem;
+  padding: 1rem;
+}*/
+
+.footer-text {
+  font-size: 0.9rem;
+  color: #333;
+  line-height: 1.2;
 }
 
 .footer-spacer{
@@ -247,15 +253,6 @@ html, body {
     transform: scale(1.5);
   }
 
-  .footer-text{
-    font-size: clamp(0.75rem, 3vw, 1rem);
-    /*text-align: center;*/
-    color: #333;
-    /*line-height: 1.5rem;
-    padding: 1rem;*/
-  }
-
-
   /*.footer-text {
     height: auto !important;
     min-height: 100px;
@@ -264,15 +261,17 @@ html, body {
     justify-content: center;
   }*/
 
+  .footer-text {
+    font-size: 0.75rem;
+  }
+
   /* Reducimos el logo del footer un poco en móvil si es necesario */
   /*.footer-text img {
     max-width: 40px;
   }*/
 
-  /* 2. El spacer es vital: es el "hueco" que dejamos al final de la web 
-     para que el usuario pueda hacer scroll y ver el texto completo */
   .footer-spacer {
-    height: 15rem !important; /* Aumentamos el hueco al final del scroll */
+    height: 5rem !important; 
   }
 
 
