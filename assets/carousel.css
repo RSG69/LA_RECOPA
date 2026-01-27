@@ -263,7 +263,7 @@ html, body {
   /* 2. El spacer es vital: es el "hueco" que dejamos al final de la web 
      para que el usuario pueda hacer scroll y ver el texto completo */
   .footer-spacer {
-    height: 15rem /*!important;*/ /* Aumentamos el hueco al final del scroll */
+    height: 15rem !important; /* Aumentamos el hueco al final del scroll */
   }
 
 
