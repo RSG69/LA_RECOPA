@@ -85,7 +85,7 @@ def cuerpo():
             lg="8.5rem"        # Espacio generoso en PC
         ),
         padding_bottom=rx.breakpoints(
-            initial="15rem",  # 👈 Suficiente espacio para que el footer no tape nada
+            initial="6rem",  # 👈 Suficiente espacio para que el footer no tape nada
             lg="6.25rem"
         ),
                 width="100%",
