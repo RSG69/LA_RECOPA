@@ -45,11 +45,11 @@ def header():
 # ================================================
 def footer():
     return rx.box(
-        rx.grid(
-            # Columna 1: Vacía para centrar el resto
-            rx.box(),
+        rx.hstack(
+            # Bloque izquierdo vacío (sirve para equilibrar el centrado del texto)
+            rx.box(width="5rem", display=rx.breakpoints(initial="none", lg="block")),
             
-            # Columna 2: Texto central (Dirección y Teléfono)
+            # Bloque Central: Dirección y Teléfono
             rx.vstack(
                 rx.text(
                     "Dirección: C/ Mosén Andrés Vicente, nº 27 – Zaragoza",
@@ -61,11 +61,12 @@ def footer():
                     color="#333",
                     font_size=rx.breakpoints(initial="0.65rem", lg="0.85rem"),
                 ),
-                spacing="2",
+                spacing="0",
                 align="center",
+                flex="1", # Esto hace que este bloque ocupe el espacio central
             ),
             
-            # Columna 3: Logo y Copyright a la derecha
+            # Bloque Derecho: Logo y Copyright (empujado a la derecha)
             rx.vstack(
                 rx.image(
                     src="/rsg69.png", 
@@ -76,14 +77,14 @@ def footer():
                 rx.text("©Robert69", font_size="0.6rem", color="#666"),
                 spacing="0",
                 align="center",
-                padding_right="1rem",
+                padding_right="1.5rem", # Margen desde el borde derecho
             ),
-            columns="3",
             width="100%",
-            align_items="center",
+            align="center",
+            justify="between", # 🔑 Esta es la clave para separar los elementos
         ),
         width="100%",
-        height="4rem",
+        height="3.5rem", # Ajustado para que sea fino como en la captura
         bg="white",
         border_top="1px solid #eaeaea",
         position="fixed",
