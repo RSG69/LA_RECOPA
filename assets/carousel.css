@@ -157,10 +157,10 @@ html, body {
 
 .footer-text{
   font-size: clamp(0.75rem, 3vw, 1rem);
-  text-align: center;
+  /*text-align: center;*/
   color: #333;
-  line-height: 1.5;
-  padding: 1rem;
+  /*line-height: 1.5rem;
+  padding: 1rem;*/
 }
 
 .footer-spacer{
@@ -246,6 +246,15 @@ html, body {
   .logo-recopa{
     transform: scale(1.5);
   }
+
+  .footer-text{
+    font-size: clamp(0.75rem, 3vw, 1rem);
+    /*text-align: center;*/
+    color: #333;
+    /*line-height: 1.5rem;
+    padding: 1rem;*/
+  }
+
 
   /*.footer-text {
     height: auto !important;
