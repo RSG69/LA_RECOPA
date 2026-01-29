@@ -6,6 +6,8 @@ import reflex as rx
 def header():
     return rx.box(
         rx.hstack(
+            # ESPACIADOR para que el siguiente hstack sepa que debe ir al centro
+            rx.spacer(),
             # Altura original 80px -> 5rem
             rx.image(src="/cafeteria.png", height="5rem", class_name="logo-bar"),
             # Altura original 60px -> 3.75rem
@@ -54,12 +56,16 @@ def footer():
                 rx.text(
                     "Dirección: C/ Mosén Andrés Vicente, nº 27 – Zaragoza",
                     color="#333",
-                    font_size=rx.breakpoints(initial="0.65rem", lg="0.85rem"),
+                    ##ont_size=rx.breakpoints(initial="0.65rem", lg="0.85rem"),
+                    font_size=rx.breakpoints(initial="0.80rem",
+                                             lg="1.3rem"), # 👈 Aumenta el valor de 'lg' (ej: de 0.85rem a 1rem)
                 ),
                 rx.text(
                     "Teléfono: 976 31 57 15",
                     color="#333",
-                    font_size=rx.breakpoints(initial="0.65rem", lg="0.85rem"),
+                    #font_size=rx.breakpoints(initial="0.65rem", lg="0.85rem"),
+                    font_size=rx.breakpoints(initial="0.80rem",
+                                             lg="1.3rem"), # 👈 Aumenta el valor de 'lg' (ej: de 0.85rem a 1rem)
                 ),
                 spacing="0",
                 align="center",
@@ -74,7 +80,7 @@ def footer():
                     height="1.25rem", 
                     border_radius="0.2rem"
                 ),
-                rx.text("©Robert69", font_size="0.6rem", color="#666"),
+                rx.text("©Robert69", font_size="0.8rem", color="#666"),
                 spacing="0",
                 align="center",
                 padding_right="1.5rem", # Margen desde el borde derecho
@@ -92,4 +98,13 @@ def footer():
         z_index="1000",
         display="flex",
         align_items="center",
+    )
+
+# ================================================
+#   IMAGEN 20 ANIVERSARIO FLOTANTE
+# ================================================
+def aniversario_flotante():
+    return rx.image(
+        src="/20_aniversario.png",
+        class_name="aniversario-float",
     )

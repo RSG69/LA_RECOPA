@@ -1,5 +1,6 @@
 import reflex as rx
 from .layout import header, footer
+from .layout import aniversario_flotante
 from .celda import crear_celda
 
 # =================================================
@@ -38,6 +39,7 @@ TITULO = "Menú Fin De Semana - 20 y 21 de Diciembre"
 def menu_weekend():
     return rx.box(
         header(),
+        aniversario_flotante(),
         rx.box(
             rx.text("PRECIO"),
         ),

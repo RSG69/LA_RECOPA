@@ -2,6 +2,7 @@ import json
 import reflex as rx
 
 from .layout import header, footer
+from .layout import aniversario_flotante
 from .menu_weekend import menu_weekend
 from .celda import crear_celda
 
@@ -98,6 +99,7 @@ def cuerpo():
 def galeria():
     return rx.box(
         header(),
+        aniversario_flotante(),  # 👈 aquí
         cuerpo(),
         footer(),
         bg="linear-gradient(135deg, #fddac7, #f7bfa8)",

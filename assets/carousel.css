@@ -196,6 +196,11 @@ html, body {
   .header-logos{
     gap: 2rem;
   }
+  .aniversario-float {
+    top: 1.5rem;
+    left: -2.75rem;
+    width: 11rem;
+  }
 }
 
 /* =========================================================
@@ -234,6 +239,12 @@ html, body {
     justify-content: center;
     gap: var(--gap);
   }
+   .aniversario-float {
+    top: 2rem;        /* baja un poco más por el header */
+    left: -2rem;      /* mantiene efecto esquina */
+    width: 9.5rem;    /* tamaño equilibrado en vertical */
+    transform: rotate(-10deg);
+  }
 }
 
 /* =========================================================
@@ -244,6 +255,13 @@ html, body {
 
   .header{
     padding: 0.25rem 0;
+  }
+
+  .aniversario-float {
+    top: 1.25rem;     /* justo debajo del header */
+    left: -1.25rem;   /* menos agresivo en móvil */
+    width: 7.5rem;    /* tamaño cómodo */
+    transform: rotate(-8deg);
   }
 
   .header-logos{
@@ -326,6 +344,13 @@ html, body {
   .logo-recopa{
     transform: scale(1.8);
   }
+
+  .aniversario-float {
+    top: 1.75rem;     /* respeta el header */
+    left: -2.25rem;   /* efecto esquina sin invadir */
+    width: 9rem;      /* tamaño contenido */
+    transform: rotate(-10deg);
+  }
 }
 
 /* =========================================================
@@ -338,6 +363,10 @@ html, body {
     gap: 0.5rem;
   }
 
+  .aniversario-float {
+    display: none;
+  }
+
   .header-logos img{
     height: 2.5rem;
   }
@@ -346,4 +375,26 @@ html, body {
   .logo-recopa{
     transform: scale(1.2);
   }
+}
+
+/* =========================================================
+   ANIVERSARIO FLOTANTE (ESQUINA SUPERIOR IZQUIERDA)
+========================================================= */
+
+.aniversario-float {
+  position: fixed;
+  top: 0.75rem;
+  left: -2.5rem;
+
+  width: 13rem;              /* ajusta tamaño */
+  max-width: 50vw;
+
+  transform: rotate(-12deg);
+  transform-origin: top left;
+
+  z-index: 1100;             /* debajo del header (1000) */
+  pointer-events: none;     /* no bloquea clics */
+  user-select: none;
+
+  opacity: 0.95;
 }
