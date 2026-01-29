@@ -273,9 +273,9 @@ html, body {
   }
   
   .aniversario-float {
-    top: 0.75rem;
+    top: 0.65rem;
     left: -1rem;
-    width: 8rem;   /* 🔽 más pequeño (antes 7.5rem) */
+    width: 7.90rem;   /* 🔽 más pequeño (antes 7.5rem) */
     transform: rotate(-8deg);
   }
 
@@ -348,8 +348,7 @@ html, body {
   }
 
   .aniversario-float {
-    top: 1
-    0.75rem;
+    top:0.75rem;
     left: -1rem;
     width: 9rem;   /* 🔽 reducido */
     transform: rotate(-9deg);
