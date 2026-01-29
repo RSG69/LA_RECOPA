@@ -239,11 +239,10 @@ html, body {
     justify-content: center;
     gap: var(--gap);
   }
-  
   .aniversario-float {
     top: 2rem;
     left: -1.75rem;
-    width: 5rem;      /* 🔽 más pequeño */
+    width: 7rem;      /* 🔽 más pequeño */
     transform: rotate(-9deg);
   }
 }
@@ -258,17 +257,10 @@ html, body {
     padding: 0.25rem 0;
   }
 
-  /*.aniversario-float {
+  .aniversario-float {
     top: 1.25rem;     /* justo debajo del header */
     left: -1.25rem;   /* menos agresivo en móvil */
-    width: 5rem;    /* tamaño cómodo */
-    transform: rotate(-8deg);
-  }*/
-
-  .aniversario-float {
-    top: 1.25rem;
-    left: -1rem;      /* menos salida en móvil */
-    width: 4rem;      /* 🔽 más pequeño */
+    width: 7.5rem;    /* tamaño cómodo */
     transform: rotate(-8deg);
   }
 
@@ -353,14 +345,12 @@ html, body {
     transform: scale(1.8);
   }
 
-  
   .aniversario-float {
     top: 1.75rem;
     left: -1.75rem;
-    width: 5.5rem;     /* 🔽 más pequeño */
+    width: 7.5rem;     /* 🔽 más pequeño */
     transform: rotate(-9deg);
   }
-  
 }
 
 /* =========================================================
@@ -373,9 +363,7 @@ html, body {
     gap: 0.5rem;
   }
 
-  .aniversario-float {
-    display: none;
-  }
+  
 
   .header-logos img{
     height: 2.5rem;
