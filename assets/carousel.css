@@ -242,7 +242,7 @@ html, body {
    .aniversario-float {
     top: 2rem;        /* baja un poco más por el header */
     left: -2rem;      /* mantiene efecto esquina */
-    width: 9.5rem;    /* tamaño equilibrado en vertical */
+    width: 7rem;    /* tamaño equilibrado en vertical */
     transform: rotate(-10deg);
   }
 }
@@ -260,7 +260,7 @@ html, body {
   .aniversario-float {
     top: 1.25rem;     /* justo debajo del header */
     left: -1.25rem;   /* menos agresivo en móvil */
-    width: 7.5rem;    /* tamaño cómodo */
+    width: 5rem;    /* tamaño cómodo */
     transform: rotate(-8deg);
   }
 
@@ -348,7 +348,7 @@ html, body {
   .aniversario-float {
     top: 1.75rem;     /* respeta el header */
     left: -2.25rem;   /* efecto esquina sin invadir */
-    width: 9rem;      /* tamaño contenido */
+    width: 7rem;      /* tamaño contenido */
     transform: rotate(-10deg);
   }
 }
