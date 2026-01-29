@@ -253,11 +253,11 @@ html, body {
     justify-content: center;
     gap: var(--gap);
   }
-  
+
   .aniversario-float {
-    top: 2rem;
-    left: -1.5rem;
-    width: 6.5rem;   /* 🔽 más pequeño */
+    top: 0rem;
+    left: 0.5rem;
+    width: 8rem;   /* 🔽 más pequeño */
     transform: rotate(-9deg);
   }
 }
